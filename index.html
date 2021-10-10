@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List by SpiralForge</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>To-Do List by SpiralForge</h1>
+    <div class="main">
+        <div id="head"><button id="menu"><i class="fa fa-list"></i></button><span id="page">Task List</span></div>
+        <div class="body">
+            <div class="navbar" id="navbar">
+                <ul id="options">
+                    <li class="option" id="opened"><i class="fa fa-spinner"></i> Opened</li>
+                    <li class="option" id="version"><i class="fa fa-history"></i> About Version</li>
+                    <li class="option" id="about">@ About Owner</li>
+                    <li class="option" id="copyright"><i class="fa fa-copyright"></i> Copyright</li>
+                    <li class="option" id="feedback"><i class="fa fa-wpforms"></i> Feedback</li>
+                </ul>
+                <div id="abtdetails">
+                    <p id="rights">
+                        <br>
+                        Total Task : <span id="totaltask">0</span>
+                        <br>
+                        Completed : <span id="taskdone">0</span>
+                        <br><br><br>
+                        <i class="fa fa-copyright">2021 by SpiralForge</i><br>
+                        All Rights Reserved<br>
+                        Version 1.0.0
+                    </p>
+                </div>
+            </div>
+            <div id="tldiv1" class="tldiv">
+                <ul id="tasklist">
+                    <!-- Tasks will be added here -->
+                    <!-- <li class="task"><input type="checkbox" name="completed" class="check" id="c${num}"> <span class="taskname" id="t${num}">${taskname}</span><button class="delete" id="d${num}"><i class="fa fa-minus-circle"></i></button></li> -->
+                </ul>
+                <div class="inputbox">
+                    <input type="text" name="newtask" id="newtask" class="addtask" autofocus spellcheck="true">
+                    <input type="button" value="+" id="add" class="addtask">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
