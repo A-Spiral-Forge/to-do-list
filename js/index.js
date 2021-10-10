@@ -79,19 +79,19 @@ function removeTask(e)
 
 $(document).ready( function() {
     $("#about").on("click", function() {
-        $("#abtdetails").load("../html/aboutme.html");
+        $("#abtdetails").load("./html/aboutme.html");
     });
 });
 
 $(document).ready( function() {
     $("#version").on("click", function() {
-        $("#abtdetails").load("../html/abtversion.html");
+        $("#abtdetails").load("./html/abtversion.html");
     });
 });
 
 $(document).ready( function() { 
     $("#opened").on("click", function() {
-        $("#abtdetails").load("../html/reserve.html");
+        $("#abtdetails").load("./html/reserve.html");
         // taskdone.innerHTML = taskdonecount;
         // totaltask.innerHTML = totaltaskcount;
     });
@@ -99,7 +99,7 @@ $(document).ready( function() {
 
 $(document).ready( function() { 
     $("#copyright").on("click", function() {
-        $("#abtdetails").load("../html/copyright.html");
+        $("#abtdetails").load("./html/copyright.html");
     });
 });
 
