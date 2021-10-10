@@ -64,6 +64,14 @@ $(document).on('click', '[type=checkbox]', function() {
 // Delete task when delete button clicked
 function removeTask(e)
 {
+    let c = e.parentElement.childNodes;
+    if(c[0].checked == true)
+    {
+        taskdonecount-=1;
+    }
+    totaltaskcount-=1;
+    taskdone.innerHTML = taskdonecount;
+    totaltask.innerHTML = totaltaskcount;
     e.parentElement.remove();
 };
 
@@ -84,6 +92,8 @@ $(document).ready( function() {
 $(document).ready( function() { 
     $("#opened").on("click", function() {
         $("#abtdetails").load("../html/reserve.html");
+        // taskdone.innerHTML = taskdonecount;
+        // totaltask.innerHTML = totaltaskcount;
     });
 });
 

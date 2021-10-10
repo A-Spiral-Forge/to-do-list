@@ -200,6 +200,13 @@ input[type=checkbox]:checked
     background-color: rgb(25, 131, 131);
 }
 
+#count
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
 
 @media (max-width:600px) {
     .navbar
