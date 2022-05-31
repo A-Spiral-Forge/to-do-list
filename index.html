@@ -1,52 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List by SpiralForge</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <h1>To-Do List by SpiralForge</h1>
-    <div class="main">
-        <div id="head"><button id="menu"><i class="fa fa-list"></i></button><span id="page">Task List</span></div>
-        <div class="body">
-            <div class="navbar" id="navbar">
-                <ul id="options">
-                    <li class="option" id="opened"><i class="fa fa-spinner"></i> Opened</li>
-                    <li class="option" id="version"><i class="fa fa-history"></i> About Version</li>
-                    <li class="option" id="about">@ About Owner</li>
-                    <li class="option" id="copyright"><i class="fa fa-copyright"></i> Copyright</li>
-                    <li class="option" id="feedback"><i class="fa fa-wpforms"></i> Feedback</li>
-                </ul>
-                <div id="abtdetails">
-                    <p id="rights">
-                        <br><br><br><br><br><br><br>
-                        <i class="fa fa-copyright">2021 by SpiralForge</i><br>
-                        All Rights Reserved<br>
-                        Version 1.1.1
-                    </p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To-Do List by SpiralForge</title>
+		<link
+			rel="shortcut icon"
+			href="./images/favicon.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script defer src="./js/index.js"></script>
+	</head>
+	<body>
+		<h1>Do Your Work..</h1>
+		<nav>
+			<ul class="nav__menu">
+				<li class="nav__button nav__button--active" data-btn="0">
+					All_Task
+				</li>
+				<li class="nav__button" data-btn="1">Upcoming</li>
+				<li class="nav__button" data-btn="2">Completed</li>
+				<li class="nav__button" data-btn="3">About_Us</li>
+				<li class="nav__button" data-btn="4">Version</li>
+				<li class="nav__button" data-btn="5">Copyright</li>
+			</ul>
+			<button class="btn--open--modal">Add Task</button>
+		</nav>
+		<div
+			class="container container--0 container--active"
+			data-container="0"
+		>
+			<h2>Total Tasks List</h2>
+			<ul class="content task__list">
+				<!-- <li class="task task--0" data-task_number="0" data-completed="false">
+                <div class="checkbox__input">
+                    <label class="checkbox__label">
+                        <input type="checkbox" class="checkbox" data-checkbox_number="0">
+                    </label>
                 </div>
-            </div>
-            <div id="tldiv1" class="tldiv">
-                <ul id="tasklist">
-                    <!-- Tasks will be added here -->
-                    <!-- <li class="task"><input type="checkbox" name="completed" class="check" id="c${num}"> <span class="taskname" id="t${num}">${taskname}</span><button class="delete" id="d${num}"><i class="fa fa-minus-circle"></i></button></li> -->
-                </ul>
-                <div id="count">
-                    Total Task : <span id="totaltask">0</span> Completed : <span id="taskdone">0</span>
+                <div class="task__details">
+                    <input type="text" value="Lorem, ipsum dolor." class="task__details--name not__editable" data-name_number="0" disabled="true">
+                    <div class="task__details--datediv">
+                        Due <input type="text" value="December 19, 2021" class="task__details--date not__editable" data-date_number="0" disabled="true">
+                    </div>
                 </div>
-                <div class="inputbox">
-                    <input type="text" name="newtask" id="newtask" class="addtask" autofocus spellcheck="true">
-                    <input type="button" value="+" id="add" class="addtask">
+                <div class="task__buttons">
+                    <button class="task__button task__button--edit" data-edit_number="0"><i class="fa fa-edit"></i></button>
+                    <button class="task__button task__button--delete" data-delete_number="0"><i class="fa fa-trash"></i></button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="./js/index.js"></script>
-</body>
+            </li> -->
+			</ul>
+		</div>
+		<div class="container container--1" data-container="1">
+			<h2>Upcoming Tasks List</h2>
+			<ul class="content task__list--upcoming">
+				<!-- <li class="task task--0" data-task_number="0" data-completed="false">
+                <div class="checkbox__input">
+                    <label class="checkbox__label">
+                        <input type="checkbox" class="checkbox" data-checkbox_number="0">
+                    </label>
+                </div>
+                <div class="task__details">
+                    <input type="text" value="Lorem, ipsum dolor." class="task__details--name not__editable" data-name_number="0" disabled="true">
+                    <div class="task__details--datediv">
+                        Due <input type="text" value="December 19, 2021" class="task__details--date not__editable" data-date_number="0" disabled="true">
+                    </div>
+                </div>
+                <div class="task__buttons">
+                    <button class="task__button task__button--edit" data-edit_number="0"><i class="fa fa-edit"></i></button>
+                    <button class="task__button task__button--delete" data-delete_number="0"><i class="fa fa-trash"></i></button>
+                </div>
+            </li> -->
+			</ul>
+		</div>
+		<div class="container container--2" data-container="2">
+			<h2>Completed Tasks List</h2>
+			<ul class="content task__list--completed">
+				<!-- <li class="task task--0" data-task_number="0" data-completed="false">
+                <div class="checkbox__input">
+                    <label class="checkbox__label">
+                        <input type="checkbox" class="checkbox" data-checkbox_number="0">
+                    </label>
+                </div>
+                <div class="task__details">
+                    <input type="text" value="Lorem, ipsum dolor." class="task__details--name not__editable" data-name_number="0" disabled="true">
+                    <div class="task__details--datediv">
+                        Due <input type="text" value="December 19, 2021" class="task__details--date not__editable" data-date_number="0" disabled="true">
+                    </div>
+                </div>
+                <div class="task__buttons">
+                    <button class="task__button task__button--edit" data-edit_number="0"><i class="fa fa-edit"></i></button>
+                    <button class="task__button task__button--delete" data-delete_number="0"><i class="fa fa-trash"></i></button>
+                </div>
+            </li> -->
+			</ul>
+		</div>
+		<div class="container container--3" data-container="3">
+			<h2>About Owner</h2>
+			<div class="content">
+				<p class="abtme"><b>Name:</b> Abhay Parihar</p>
+				<p class="abtme"><b>Username:</b> SpiralForge</p>
+				<p class="abtme"><b>Contact:</b> 6265119378</p>
+				<p class="abtme">
+					<b>Mail:</b>
+					<a href="mailto:friends.abhayparihar@gmail.com">
+						Click Here</a
+					>
+					or mail to friends.abhayparihar@gmail.com
+				</p>
+				<p class="abtme"><b>Branch:</b> Information Technology</p>
+				<p class="abtme"><b>College:</b> IIIT Allahabd</p>
+				<p class="abtme">
+					To know more about me visit my portfolio (
+					<a href="http://spiralforge.herokuapp.com/" target="_blank"
+						>Click Here</a
+					>
+					).
+				</p>
+				<div class="abtme social--links">
+					<a
+						href="https://www.facebook.com/spiralforge.a.s"
+						target="_blank"
+						><i class="fa fa-facebook"></i
+					></a>
+					<a
+						href="https://www.instagram.com/spiralforge_"
+						target="_blank"
+						><i class="fa fa-instagram"></i
+					></a>
+					<a href="https://twitter.com/SpiralForge_" target="_blank"
+						><i class="fa fa-twitter"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/abhay-parihar-132281201"
+						target="_blank"
+						><i class="fa fa-linkedin"></i
+					></a>
+					<a href="https://github.com/A-Spiral-Forge" target="_blank"
+						><i class="fa fa-github"></i
+					></a>
+				</div>
+			</div>
+		</div>
+		<div class="container container--4" data-container="4">
+			<h2>Version History</h2>
+			<div class="content">
+				<details>
+					<summary>
+						<h5>Version 1.0.0</h5>
+					</summary>
+					<div class="main">
+						This is the first version of To-Do List by
+						SpiralForge.<br />
+						<span>This contains:</span>
+						<ol>
+							<li>Adding a task</li>
+							<li>Deleting a task</li>
+							<li>Strikethrough on check checkbox</li>
+							<li>Remove strikethrough on uncheck box</li>
+						</ol>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h5>Version 1.1.0</h5>
+					</summary>
+					<div class="main">
+						Major Bug Fixes<br />
+						<span>Bug Fixes:</span>
+						<ol>
+							<li>Change count on deletion</li>
+							<li>
+								Change completed count when completed task
+								deleted
+							</li>
+							<li>Position of count changed</li>
+						</ol>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h5>Version 1.1.1</h5>
+					</summary>
+					<div class="main">
+						Minor Bug Fixes<br />
+						<span>Bug Fixes:</span>
+						<ol>
+							<li>
+								Fixed bug when clicking the button in navbar no
+								changes occur previosly. Now it is fixed.
+							</li>
+						</ol>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h5>Version 2.0.0</h5>
+					</summary>
+					<div class="main">
+						Major Features and UI Change<br />
+						<span>Following changes are done:</span>
+						<ol>
+							<li>
+								Upcoming and Completed task list are added to
+								see them separately.
+							</li>
+							<li>
+								Local storage is used for keep safe of tasks.
+							</li>
+							<li>Add task modal is introduced.</li>
+							<li>New user interface is introduced.</li>
+							<li>
+								Missing tasks are now marked as red and complted
+								marked green.
+							</li>
+							<li>Editing tasks is introduced.</li>
+						</ol>
+					</div>
+				</details>
+			</div>
+		</div>
+		<div class="container container--5" data-container="5">
+			<h2>Copyright Notice</h2>
+			<div class="content">
+				<p class="copyright">
+					Copyright &copy; SpiralForge 2021 All Rights Reserved
+					<br /><br />
+					All files and information contained in this Website or Blog
+					are copyright by <span class="myname">Abhay Parihar</span>,
+					and may not be duplicated, copied, modified or adapted, in
+					any way without our written permission. Our Website or Blog
+					may contain our service marks or trademarks as well as those
+					of our affiliates or other companies, in the form of words,
+					graphics, and logos. Your use of our Website, Blog or
+					Services does not constitute any right or license for you to
+					use our service marks or trademarks, without the prior
+					written permission of
+					<span class="myname">Abhay Parihar</span>. Our Content, as
+					found within our Website, Blog and Services, is protected
+					under India and foreign copyrights. The copying,
+					redistribution, use or publication by you of any such
+					Content, is strictly prohibited. Your use of our Website and
+					Services does not grant you any ownership rights to our
+					Content.
+				</p>
+			</div>
+		</div>
+		<div class="overlay hidden"></div>
+		<div class="task__add--modal hidden">
+			<div class="close--btn-div">
+				<span class="close--btn">&times;</span>
+			</div>
+			<form class="form__add--task">
+				<div class="input__form--flex">
+					<label for="taskName" class="input__task--label"
+						>Task Name:</label
+					>
+					<input
+						type="text"
+						name="taskName"
+						class="input__task input__task--name"
+						placeholder="Enter task name here"
+					/><br />
+				</div>
+				<div class="input__form--flex">
+					<label for="dueDate" class="input__task--label"
+						>Date:</label
+					>
+					<input
+						type="date"
+						name="dueDate"
+						class="input__task input__task--date"
+						placeholder="1970-01-01"
+					/>
+				</div>
+				<div class="input__form--flex">
+					<button
+						type="submit"
+						class="input__task input__task--btn input__task--add"
+					>
+						Add Task
+					</button>
+					<button
+						type="reset"
+						class="input__task input__task--btn input__task--reset"
+					>
+						Reset
+					</button>
+				</div>
+			</form>
+		</div>
+	</body>
 </html>
