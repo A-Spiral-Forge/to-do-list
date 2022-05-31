@@ -349,7 +349,9 @@ navBar.addEventListener('click', (e) => {
 const init = () => {
 	const demotask = new Task('Lorem, ipsum dolor.', 'December 19, 2021', 0);
 	// tasks.push(demotask);
-	tasks = localStorage.getItem('do-your-work-tasks');
+	if (localStorage.getItem('do-your-work-tasks')) {
+		tasks = localStorage.getItem('do-your-work-tasks');
+	}
 	// localStorage.setItem('do-your-work-tasks', JSON.stringify(tasks));
 	loadTasks();
 };
