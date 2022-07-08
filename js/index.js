@@ -41,10 +41,12 @@ class Task {
 }
 
 const compare = (a, b) => {
-	if (a.id < b.id) {
+	const adate = new Date(a.date);
+	const bdate = new Date(b.date);
+	if (adate < bdate) {
 		return -1;
 	}
-	if (a.id > b.id) {
+	if (adate > bdate) {
 		return 1;
 	}
 	return 0;
@@ -64,9 +66,12 @@ const formatDate = (date) => {
 
 const loadTasks = () => {
 	if (localStorage.getItem('do-your-work-tasks')) {
-		tasks = JSON.parse(localStorage.getItem('do-your-work-tasks')).map(
-			(task) => new Task(task.name, task.date, task.id, task.completed)
-		);
+		tasks = JSON.parse(localStorage.getItem('do-your-work-tasks'))
+			.map(
+				(task) =>
+					new Task(task.name, task.date, task.id, task.completed)
+			)
+			.sort(compare);
 	}
 	taskList.innerHTML =
 		taskListCompleted.innerHTML =
